@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "95cfb744-c9dc-4bc5-909a-e514ba1b2bd7",
+		"name": "User Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32504809"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"New\",\n    \"lastName\": \"User\",\n    \"emailAddress\": \"new.s@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All seats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/seats"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tariffs",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Book ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":1,\n    \"seatId\":1,\n    \"tariffId\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/seats/book"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Change seat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":1,\n    \"seatId\":2,\n    \"tariffId\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/seat/change"
+			},
+			"response": []
+		},
+		{
+			"name": "Occupied Seats by Section",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/seats/section/A"
+			},
+			"response": []
+		}
+	]
+}
