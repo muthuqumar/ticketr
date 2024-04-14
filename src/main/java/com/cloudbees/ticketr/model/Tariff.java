@@ -36,4 +36,14 @@ public class Tariff {
         this.destination = destination;
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Tariff{" +
+                "id=" + id +
+                ", source='" + source + '\'' +
+                ", destination='" + destination + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

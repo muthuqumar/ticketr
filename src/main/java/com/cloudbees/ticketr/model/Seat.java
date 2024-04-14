@@ -27,11 +27,12 @@ public class Seat {
     private Long id;
     @Column(nullable = false)
     private String section;
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private Integer seatNumber;
 
     public Seat(String section, Integer seatNumber) {
         this.section = section;
         this.seatNumber = seatNumber;
     }
+
 }

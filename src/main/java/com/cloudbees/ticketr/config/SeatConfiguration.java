@@ -15,10 +15,10 @@ import java.util.List;
 public class SeatConfiguration {
 
     @Bean
-    CommandLineRunner commandLineRunner(SeatRepository seatRepository) {
+    CommandLineRunner commandLineRunnerForSeat(SeatRepository seatRepository) {
         return args -> {
             List<Seat> seats = new ArrayList<>();
-            for (int i=0; i<50; ++i) {
+            for (int i=1; i<=50; ++i) {
                 Seat seatA = new Seat("A", i);
                 Seat seatB = new Seat("B", i);
                 seats.add(seatA);

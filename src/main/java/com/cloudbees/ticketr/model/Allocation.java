@@ -23,7 +23,7 @@ public class Allocation {
             generator = "allocation-sequence"
     )
     private Long id;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
     @OneToOne
@@ -32,4 +32,20 @@ public class Allocation {
     @ManyToOne
     @JoinColumn(name = "tariff_id", referencedColumnName = "id")
     private Tariff tariff;
+
+    public Allocation(User user, Seat seat, Tariff tariff) {
+        this.user = user;
+        this.seat = seat;
+        this.tariff = tariff;
+    }
+
+    @Override
+    public String toString() {
+        return "Allocation{" +
+                "id=" + id +
+                ", user=" + user +
+                ", seat=" + seat +
+                ", tariff=" + tariff +
+                '}';
+    }
 }

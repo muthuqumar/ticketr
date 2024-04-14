@@ -35,4 +35,14 @@ public class User implements Serializable {
         this.lastName = lastName;
         this.emailAddress = emailAddress;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                '}';
+    }
 }

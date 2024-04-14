@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class TariffConfiguration {
 
     @Bean
-    CommandLineRunner commandLineRunner(TariffRepository tariffRepository) {
+    CommandLineRunner commandLineRunnerForTariff(TariffRepository tariffRepository) {
         return args -> {
             Tariff tariff = new Tariff("London", "Paris", 5.0);
             tariffRepository.save(tariff);
