@@ -25,4 +25,9 @@ public class UserService {
     public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
     }
+
+    public User saveUser(User user) {
+        this.userRepository.save(user);
+        return this.userRepository.findUserByEmailAddress(user.getEmailAddress());
+    }
 }
